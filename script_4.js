@@ -36,3 +36,11 @@ const nowadaysAgeOfEnrepreneurs = entrepreneurs.map(entrepreneur => {
     };
     });
 console.log(nowadaysAgeOfEnrepreneurs)
+
+const sortedEntrepreneurs = entrepreneurs.sort((a, b) => {
+    if (a.first < b.first) return -1;
+    if (a.first > b.first) return 1;
+    return 0;
+});
+
+console.log(sortedEntrepreneurs);
