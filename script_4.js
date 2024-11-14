@@ -19,12 +19,17 @@ const entrepreneurs = [
     { first: 'Peter', last: 'Thiel', year: 1967 }
   ];
 
+  console.log("Qui sont les entrepreneurs nés dans les années 70 ?");
   const filteredEntrepreneurs = entrepreneurs.filter(entrepreneur => entrepreneur.year >= 1970 && entrepreneur.year < 1980);
 
 console.log(filteredEntrepreneurs);
 
+console.log("Quels sont les nom prenoms des entrepreneurs ?");
+
   const namesEntrepreneurs = entrepreneurs.map(entrepreneur =>  ({first: entrepreneur.first, last: entrepreneur.last,}));
 console.log(namesEntrepreneurs);
+
+console.log("Quel âge ont les entrepreneurs aujourd'hui ?");
 
 const nowadaysAgeOfEnrepreneurs = entrepreneurs.map(entrepreneur => {
     const age = 2024 - entrepreneur.year;
@@ -36,6 +41,8 @@ const nowadaysAgeOfEnrepreneurs = entrepreneurs.map(entrepreneur => {
     };
     });
 console.log(nowadaysAgeOfEnrepreneurs)
+
+console.log("Qui sont les entrepreneurs par ordre alphabétique ?");
 
 const sortedEntrepreneurs = entrepreneurs.sort((a, b) => {
     if (a.first < b.first) return -1;
