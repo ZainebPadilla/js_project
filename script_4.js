@@ -19,6 +19,20 @@ const entrepreneurs = [
     { first: 'Peter', last: 'Thiel', year: 1967 }
   ];
 
-  const filteredEntrepreneurs = entrepreneurs.filter(entrepreneur => entrepreneur.year >= 1970 && entrepreneur.year < 1980)
+  const filteredEntrepreneurs = entrepreneurs.filter(entrepreneur => entrepreneur.year >= 1970 && entrepreneur.year < 1980);
 
-console.log(filteredEntrepreneurs)
+console.log(filteredEntrepreneurs);
+
+  const namesEntrepreneurs = entrepreneurs.map(entrepreneur =>  ({first: entrepreneur.first, last: entrepreneur.last,}));
+console.log(namesEntrepreneurs);
+
+const nowadaysAgeOfEnrepreneurs = entrepreneurs.map(entrepreneur => {
+    const age = 2024 - entrepreneur.year;
+    return {
+
+        first: entrepreneur.first, 
+        last: entrepreneur.last, 
+        age: age
+    };
+    });
+console.log(nowadaysAgeOfEnrepreneurs)
